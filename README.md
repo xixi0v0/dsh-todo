@@ -1,4 +1,4 @@
-# @zxy/dsh-todo
+# @xixi/dsh-todo
 
 一个给自己用的 DSH（DeepSeek Harness）插件：在 Web 界面左侧栏加一行「待办清单」，点开后中间是一整页待办列表。
 
@@ -6,7 +6,7 @@
 - **完成**：勾选复选框，或直接点文字
 - **删除**：鼠标悬停在那一行，点右侧的 ✕
 - **筛选**：全部 / 未完成 / 已完成，外加「清除已完成」
-- **数据**：存在浏览器本地 `localStorage`（键名 `zxy.todo.items.v1`），关掉应用也还在
+- **数据**：存在浏览器本地 `localStorage`（键名 `xixi.todo.items.v1`），关掉应用也还在
 
 ## 安装 / 卸载
 
@@ -14,7 +14,7 @@
 # 本地目录安装（开发时用，改完代码重启 DSH 生效）
 & "$env:ProgramFiles\..."  # 或者直接用 dsh 命令
 dsh plugin --profile desktop add D:\Project\dsh-todo
-dsh plugin --profile desktop remove @zxy/dsh-todo
+dsh plugin --profile desktop remove @xixi/dsh-todo
 
 # 从 GitHub 安装（仓库根目录就是本包根目录，可以直接装）
 dsh plugin --profile desktop add github:xixi0v0/dsh-todo
@@ -59,8 +59,9 @@ dsh plugin --profile desktop add github:xixi0v0/dsh-todo#<完整commit哈希>
 
 只依赖平台已经提供的 `react`；颜色全部走 `--dsw-alias-*` 主题变量，浅色/深色主题都自适应。
 
-插件启动时会往 `localStorage` 写一条自检记录（键名 `zxy.todo.diag`），记录 `apply` 是否执行成功、两个槽位是否注册上——排障用，不影响功能。
+插件启动时会往 `localStorage` 写一条自检记录（键名 `xixi.todo.diag`），记录 `apply` 是否执行成功、两个槽位是否注册上——排障用，不影响功能。
 
 ## 改名历史
 
-- `2026-09-30`：从临时目录 `dsh-chat/dsh-todo-page`（包名 `dsh-todo-page`）迁到本仓库，更名为 `@zxy/dsh-todo`；面板 id 由 `todo` 改为 `zxy.todo`，数据键由 `dsh.todo.items.v1` 改为 `zxy.todo.items.v1`（读取时兼容旧键，自动搬运一次）。
+- `2026-09-30`：从临时目录 `dsh-chat/dsh-todo-page`（包名 `dsh-todo-page`）迁到本仓库，并把个人前缀统一为 `xixi`：包名 `@xixi/dsh-todo`、插件标识 `xixi-todo`、面板 id `xixi.todo`、数据键 `xixi.todo.items.v1`。
+- 更早的数据键不再兼容（那批数据只是测试数据，直接以空清单重来）。

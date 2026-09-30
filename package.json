@@ -1,5 +1,5 @@
 {
-  "name": "@zxy/dsh-todo",
+  "name": "@xixi/dsh-todo",
   "version": "0.1.0",
   "private": true,
   "description": "Web GUI 里的待办清单页面：侧边栏一个入口 + 一整页可增删勾选的待办列表",
