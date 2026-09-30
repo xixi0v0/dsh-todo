@@ -1,0 +1,6 @@
+# 这一层把「待办清单」插件插进 profile。
+# id 是这个插件在配置树里的名字（必须唯一，撞了会覆盖别人的行）；
+# name 是它的 npm 包名（Node 靠包名找到代码，必须和 package.json 的 name 一致）。
+- insert:
+    - id: zxy-todo
+      name: '@zxy/dsh-todo'
